@@ -1,0 +1,15 @@
+rect {
+	stroke: #000;
+}
+.click {
+	fill: yellow;
+}
+.start {
+	fill: red;
+}
+.end {
+	fill: green;
+}
+#cursor{
+	stroke: rgba(255,0,0, 0.6);
+}
