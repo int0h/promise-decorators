@@ -5,14 +5,18 @@
         "lib": [
             "es5",
             "es2015.promise",
-            "scripthost"
+            "scripthost",
+            "dom"
         ],
         "experimentalDecorators": true,
-        "outDir": "./dist",
+        "outDir": "./dist/",
         "declaration": true,
+        "inlineSourceMap": true,
+        "moduleResolution": "node",
         "module": "commonjs"
     },
     "include": [
-        "./src/**.ts"
+        "./src/**.ts",
+        "./node_modules/**/*.ts"
     ]
 }
