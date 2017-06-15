@@ -30,3 +30,19 @@ function asyncTransform(fn, transform) {
 		});
 	};	
 }
+
+function watchPromise(asyncFn, handler){
+	return (...args) => {
+		handler('pending');
+		return asyncFn(...args).then(
+			result => {
+				handler('resolved');
+				return result;
+			}, 
+			error => {
+				handler('rejected');
+				throw error;
+			}
+		);
+	}
+}

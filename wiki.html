@@ -16,23 +16,6 @@
 
 <script type="text/javascript">
 
-	function watchPromise(asyncFn, handler){
-		return (...args) => {
-			handler('pending');
-			return asyncFn(...args).then(
-				result => {
-					handler('resolved');
-					return result;
-				}, 
-				error => {
-					handler('rejected');
-					throw error;
-				}
-			);
-		}
-	}
-
-
 	text = document.getElementById('text');
 	results = document.getElementById('results');
 	loader = document.getElementById('loader');
