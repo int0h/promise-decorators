@@ -2,6 +2,7 @@ import {
     asyncTransform as _asyncTransform,
     takeLast as _takeLast,
     watchPromise as _watchPromise,
+    throttle as _throttle,
     AsyncFunction,
     WatchHandler
 } from './index';
@@ -29,5 +30,11 @@ export function takeLast<T>(): AsyncFunctionDecorator<T> {
 export function watchPromise<T>(handler: WatchHandler): AsyncFunctionDecorator<T> {
     return (target: any, key: string, descriptor: any) => ({
         value: _watchPromise<T>(descriptor.value, handler)
+    });
+}
+
+export function throttle<T>(pause: number): AsyncFunctionDecorator<T> {
+    return (target: any, key: string, descriptor: any) => ({
+        value: _throttle<T>(descriptor.value, pause)
     });
 }

@@ -7,3 +7,4 @@ export interface AsyncFunctionDecorator<T> {
 export declare function asyncTransform<T>(transform: Function): AsyncFunctionDecorator<T>;
 export declare function takeLast<T>(): AsyncFunctionDecorator<T>;
 export declare function watchPromise<T>(handler: WatchHandler): AsyncFunctionDecorator<T>;
+export declare function throttle<T>(pause: number): AsyncFunctionDecorator<T>;

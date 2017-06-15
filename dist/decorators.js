@@ -20,3 +20,9 @@ function watchPromise(handler) {
     }); };
 }
 exports.watchPromise = watchPromise;
+function throttle(pause) {
+    return function (target, key, descriptor) { return ({
+        value: index_1.throttle(descriptor.value, pause)
+    }); };
+}
+exports.throttle = throttle;
