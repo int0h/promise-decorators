@@ -16,7 +16,6 @@
         "module": "commonjs"
     },
     "include": [
-        "./src/**.ts",
-        "./node_modules/**/*.ts"
+        "./src/**.ts"
     ]
 }

@@ -1,15 +1,41 @@
 rect {
 	stroke: #000;
 }
-.click {
+
+.tick.yellow {
 	fill: yellow;
 }
-.start {
+
+.tick.red {
 	fill: red;
 }
-.end {
-	fill: green;
+
+.tick.green {
+	fill: limegreen;
 }
-#cursor{
+
+.tick.blue {
+	fill: darkturquoise;
+}
+
+.cursor{
 	stroke: rgba(255,0,0, 0.6);
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+	margin-right: 5px;
+    font-size: 12px;
+}
+
+.time-line-wrapper {
+    display: flex;
+	margin: 15px 0px;
+}
+
+.labels span {
+    line-height: 10px;
+    margin-top: 10px;
+    align-self: flex-end;
 }

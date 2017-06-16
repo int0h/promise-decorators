@@ -15,7 +15,7 @@ class Api {
 
     @watchPromise(toggleLoader)
     @takeLast()
-    @throttle(1500)
+    @throttle(300)
     search(text: string) {
         return fetch(this.host + `?action=opensearch&format=json&origin=*&search=${encodeURIComponent(text)}&limit=10`);
     }

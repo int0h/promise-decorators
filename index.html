@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="skeleton.css">
+	<link rel="stylesheet" type="text/css" href="svgLog.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h2>Promise-decorators examples</h2>
+		<section>
+			<h3>Basic visualisation</h3>
+			<p>
+				This example shows search wiki stuff
+			</p>
+			<div id="basic-time-line"></div>	
+			<button id="basic-button" class="button button-primary">Click me!</button>
+		</section>
+		<section>
+			<h3>Wiki search</h3>
+			<p>
+				This example shows search wiki stuff
+			</p>
+			<label>
+				Find:
+				<input type="text" id="text" />
+			</label>			
+			<i id='loader' style='display: none'>loading...</i>
+			<label>
+				Results:
+				<ul id='results'></ul>
+			</label>
+		</section>
+	</div>
+
+<script type="text/javascript" src="./require1k.js" data-main="./index"></script>
+
+</body>
+</html>
