@@ -10,7 +10,9 @@
         "experimentalDecorators": true,
         "outDir": "./dist/",
         "declaration": true,
-        "module": "commonjs"
+        "module": "commonjs",
+        "inlineSourceMap": true,
+        "inlineSources": true
     },
     "include": [
         "./src/**.ts"
