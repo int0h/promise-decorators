@@ -6,7 +6,7 @@ export interface WatchHandler {
 	(state: PromiseState): void;
 }
 
-export function watchPromise<T>(fn: AsyncFunction<T>, handler: WatchHandler){
+export function watchPromise<T>(fn: AsyncFunction<T>, handler: WatchHandler): AsyncFunction<T> {
 	return function(...args: any[]) {
 		handler('pending');
 		return fn.apply(this, args).then(
