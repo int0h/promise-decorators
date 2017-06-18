@@ -4,3 +4,16 @@ section {
     padding-bottom: 25px;
     width: 700px;
 }
+
+.CodeMirror {
+    border: 1px solid #eee;
+    height: auto;
+    width: 500px;
+    margin: 15px 10px 20px 10px;
+}
+
+#results,
+#loader {
+    height: 350px;
+    margin-bottom: 25px; 
+}

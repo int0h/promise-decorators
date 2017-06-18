@@ -10,6 +10,7 @@ const getSvgCode = ({height}) => `
 		</pattern>
 		</defs>
 		<rect width="100%" height="100%" fill="url(#grid)" />
+		<g class="layer"></g>
 		<line class="cursor" x1="10" y1="0" x2="10" y2="${height}" />
 	</svg>
 `;
@@ -29,7 +30,8 @@ function setAttrs(elm, attrs) {
 }
 
 class TimeLine {
-	constructor (parentElm, types) {
+	constructor (parentElm, types, scale=30) {
+		this.scale = scale;
 		this.startTime = null;
 		this.types = {};
 		const labels = [];
@@ -44,12 +46,21 @@ class TimeLine {
 			count++;
 		}
 		parentElm.innerHTML = wrapCode(makeLabels(labels) + getSvgCode({height: count * 20 + 10}));
+		this.layer = parentElm.querySelector('.layer');
 		this.svg = parentElm.querySelector('.time-line-svg');
 		this.cursor = parentElm.querySelector('.cursor');
 	}
 
+	addLayer(){
+		var layer = document.createElementNS("http://www.w3.org/2000/svg", "g");
+		setAttrs(layer, {class: 'layer'});
+		this.svg.appendChild(layer);
+		return layer;
+	}
+
 	moveCursor(){
 		var x = this.getCurrentPos();
+		
 		setAttrs(this.cursor, {
 			x1: x,
 			x2: x
@@ -58,7 +69,16 @@ class TimeLine {
 	}
 
 	getCurrentPos(){
-		return (Date.now() - this.startTime) / 30 + 10;
+		let pos = (Date.now() - this.startTime) / this.scale + 10;
+		
+		if (pos > 500) {
+			this.startTime = Date.now();
+			this.layer.remove();
+			this.layer = this.addLayer();
+			return this.getCurrentPos();
+		}
+
+		return pos;
 	}
 
 	log(type, n) {
@@ -66,14 +86,14 @@ class TimeLine {
 			this.startTime = Date.now();
 			this.moveCursor();
 		}
-		var type = Object.assign({}, this.types[type], {
+		var props = Object.assign({}, this.types[type], {
 			x: Math.round(this.getCurrentPos()) + 0.5,
 			width: 3,
 			height: 10
 		});
 		var point = document.createElementNS("http://www.w3.org/2000/svg", "rect");
-		setAttrs(point, type);
-		this.svg.appendChild(point);
+		setAttrs(point, props);
+		this.layer.appendChild(point);
 	}
 }
 

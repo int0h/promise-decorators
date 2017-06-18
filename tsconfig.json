@@ -10,10 +10,10 @@
         ],
         "experimentalDecorators": true,
         "outDir": "./dist/",
-        "declaration": true,
         "inlineSourceMap": true,
         "moduleResolution": "node",
-        "module": "commonjs"
+        "module": "commonjs",
+        "allowJs": true
     },
     "include": [
         "./src/**.ts"
