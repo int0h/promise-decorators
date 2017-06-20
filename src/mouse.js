@@ -4,41 +4,41 @@ const {takeLast, throttle} = require('promise-decorators');
 require('codemirror/mode/javascript/javascript');
 
 const mmTimeLine = new TimeLine(document.querySelector('#mm-time-line'), {
-	click: {
+    click: {
         caption: 'Move event',
-		class: 'yellow'
-	},
-	start: {
+        class: 'yellow'
+    },
+    start: {
         caption: 'Send request',
-		class: 'red'
-	},
-	end: {
+        class: 'red'
+    },
+    end: {
         caption: 'Got response',
-		class: 'green'
-	},
-	output: {
+        class: 'green'
+    },
+    output: {
         caption: 'Output new data',
-		class: 'blue'
-	}
+        class: 'blue'
+    }
 }, 5);
 
 const mmTimeLine2 = new TimeLine(document.querySelector('#mm-time-line2'), {
-	click: {
+    click: {
         caption: 'Move event',
-		class: 'yellow'
-	},
-	start: {
+        class: 'yellow'
+    },
+    start: {
         caption: 'Send request',
-		class: 'red'
-	},
-	end: {
+        class: 'red'
+    },
+    end: {
         caption: 'Got response',
-		class: 'green'
-	},
-	output: {
+        class: 'green'
+    },
+    output: {
         caption: 'Output new data',
-		class: 'blue'
-	}
+        class: 'blue'
+    }
 }, 5);
 
 const field = document.querySelector('#mm-target');
@@ -46,15 +46,15 @@ const field = document.querySelector('#mm-target');
 const fetch = (tl) => pseudoFetch.bind(null, ()=>tl.log('start'), ()=>tl.log('end'));
 const smartFetch = takeLast(throttle(fetch(mmTimeLine2), 500));
 
-const listen = (fetch, timeLine) => {	
-	field.addEventListener('mousemove', () => {
-		timeLine.log('click');
+const listen = (fetch, timeLine) => {    
+    field.addEventListener('mousemove', () => {
+        timeLine.log('click');
 
-		fetch('some/url/')
-			.then(result => {
-				timeLine.log('output');				
-			});
-	});
+        fetch('some/url/')
+            .then(result => {
+                timeLine.log('output');                
+            });
+    });
 };
 
 listen(fetch(mmTimeLine), mmTimeLine);

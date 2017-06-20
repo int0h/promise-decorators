@@ -92,6 +92,41 @@
 			<div id="mm-time-line"></div>
 			<div id="mm-time-line2"></div>
 		</section>
+		<section>
+			<h3>Custom</h3>
+			<p>
+				This example shows search wiki stuff
+			</p>		
+			<button id="custom-click-button" class="button button-primary">Ping #0</button>			
+			<i class="spinner" id="custom-spinner"></i>
+			<label>
+				Output: 
+				<div class="output" id="custom-output">...</div>
+			</label>
+			<div id="custom-time-line"></div>
+			<h5>Settings:</h5>
+			<form id="custom-settings">
+				<label>
+					Fetch time:
+					<input type="number" value="500" name="base"/> ± <input type="number" value="300" name="deviation"/> ms
+				</label>
+			</form>
+			Code (<b>editable</b>):			
+			<div id="custom-code"></div>
+			<p>
+				Available varibles:
+				<code>fetch</code>
+				<code>button</code>
+				<code>timeLine</code>
+				<code>spinner</code>
+				<code>getN</code>
+				<code>output</code>
+				<code><b>throttle</b></code>
+				<code><b>takeLast</b></code>
+				<code><b>watchPromise</b></code>
+			</p>
+			<button class="button button-primary" id="custom-apply">Apply</button>			
+		</section>
 	</div>
 
 <script type="text/javascript" src="./dist/bundle.js"></script>

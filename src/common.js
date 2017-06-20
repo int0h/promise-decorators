@@ -6,4 +6,11 @@ const pseudoFetch = (onStart, onEnd) => {
         .then(() => onEnd());
 };
 
-module.exports = {pause, pseudoFetch};
+function getCode(fn) {
+    const code = fn.toString().match(/\/\/\s*\[code\][^\n]*\n([^]*)\/\/\s*\[\/code\]/)[1];
+    const prefix = code.match(/^\s*/)[0];
+    const re = new RegExp('(^|\\n)' + prefix, 'g');
+    return code.replace(re, '$1');
+}
+
+module.exports = {pause, pseudoFetch, getCode};

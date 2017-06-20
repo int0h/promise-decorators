@@ -10,22 +10,22 @@ const results = document.getElementById('results');
 const loader = document.getElementById('loader');
 
 const wikiTimeLine = new TimeLine(document.querySelector('#wiki-time-line'), {
-	type: {
+    type: {
         caption: 'Keyboard event',
-		class: 'yellow'
-	},	
-	start: {
+        class: 'yellow'
+    },    
+    start: {
         caption: 'Send request',
-		class: 'red'
-	},
-	end: {
+        class: 'red'
+    },
+    end: {
         caption: 'Got response',
-		class: 'green'
-	},
-	output: {
+        class: 'green'
+    },
+    output: {
         caption: 'Output new data',
-		class: 'blue'
-	}
+        class: 'blue'
+    }
 });
 
 function buildQuery(params: any) {

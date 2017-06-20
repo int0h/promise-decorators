@@ -4,3 +4,4 @@ require('./basic');
 require('./hello');
 require('./wiki');
 require('./mouse');
+require('./custom');
