@@ -5,7 +5,8 @@
         "lib": [
             "es5",
             "es2015.promise",
-            "scripthost"
+            "scripthost",
+            "dom"
         ],
         "experimentalDecorators": true,
         "outDir": "./dist/",
