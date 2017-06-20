@@ -1,0 +1,1 @@
+demo https://int0h.github.io/promise-decorators/
