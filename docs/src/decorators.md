@@ -2,6 +2,11 @@
 Interface [AsyncFunctionDecorator]
 ===
 
+Signature
+---
+```typescript
+(target: any, key: string, descriptor: any) => <unsupported-type>
+```
 
 Function [asyncTransform\<T\>]
 ===

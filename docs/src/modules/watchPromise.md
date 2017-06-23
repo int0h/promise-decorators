@@ -2,6 +2,11 @@
 Interface [WatchHandler]
 ===
 
+Signature
+---
+```typescript
+(state: PromiseState) => void
+```
 
 
 
