@@ -1,0 +1,23 @@
+{
+  "name": "promise-decorators",
+  "version": "0.0.1",
+  "description": "demo https://int0h.github.io/promise-decorators/",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "typedoc-markdown": "git+https://github.com/int0h/typedoc-markdown.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/int0h/promise-decorators.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/int0h/promise-decorators/issues"
+  },
+  "homepage": "https://github.com/int0h/promise-decorators#readme"
+}

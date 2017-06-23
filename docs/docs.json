@@ -1,0 +1,1230 @@
+{
+	"id": 0,
+	"name": "promise-decorators",
+	"kind": 0,
+	"flags": {},
+	"children": [
+		{
+			"id": 45,
+			"name": "\"decorators\"",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "D:/Coding/typescript/promise-decorators/master/src/decorators.ts",
+			"children": [
+				{
+					"id": 46,
+					"name": "AsyncFunctionDecorator",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"typeParameter": [
+						{
+							"id": 47,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {}
+						}
+					],
+					"signatures": [
+						{
+							"id": 48,
+							"name": "__call",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 49,
+									"name": "target",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								},
+								{
+									"id": 50,
+									"name": "key",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 51,
+									"name": "descriptor",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 52,
+									"name": "__type",
+									"kind": 65536,
+									"kindString": "Type literal",
+									"flags": {},
+									"children": [
+										{
+											"id": 53,
+											"name": "value",
+											"kind": 32,
+											"kindString": "Variable",
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "decorators.ts",
+													"line": 12,
+													"character": 13
+												}
+											],
+											"type": {
+												"type": "reference",
+												"name": "AsyncFunction",
+												"id": 33,
+												"typeArguments": [
+													{
+														"type": "typeParameter",
+														"name": "T"
+													}
+												]
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Variables",
+											"kind": 32,
+											"children": [
+												53
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "decorators.ts",
+											"line": 11,
+											"character": 48
+										}
+									]
+								}
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "decorators.ts",
+							"line": 10,
+							"character": 39
+						}
+					]
+				},
+				{
+					"id": 54,
+					"name": "asyncTransform",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 55,
+							"name": "asyncTransform",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"typeParameter": [
+								{
+									"id": 56,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {}
+								}
+							],
+							"parameters": [
+								{
+									"id": 57,
+									"name": "transform",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "Function"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "AsyncFunctionDecorator",
+								"id": 46,
+								"typeArguments": [
+									{
+										"type": "typeParameter",
+										"name": "T"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "decorators.ts",
+							"line": 18,
+							"character": 30
+						}
+					]
+				},
+				{
+					"id": 58,
+					"name": "takeLast",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 59,
+							"name": "takeLast",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"typeParameter": [
+								{
+									"id": 60,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "AsyncFunctionDecorator",
+								"id": 46,
+								"typeArguments": [
+									{
+										"type": "typeParameter",
+										"name": "T"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "decorators.ts",
+							"line": 24,
+							"character": 24
+						}
+					]
+				},
+				{
+					"id": 65,
+					"name": "throttle",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 66,
+							"name": "throttle",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"typeParameter": [
+								{
+									"id": 67,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {}
+								}
+							],
+							"parameters": [
+								{
+									"id": 68,
+									"name": "pause",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "AsyncFunctionDecorator",
+								"id": 46,
+								"typeArguments": [
+									{
+										"type": "typeParameter",
+										"name": "T"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "decorators.ts",
+							"line": 36,
+							"character": 24
+						}
+					]
+				},
+				{
+					"id": 61,
+					"name": "watchPromise",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true
+					},
+					"signatures": [
+						{
+							"id": 62,
+							"name": "watchPromise",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"typeParameter": [
+								{
+									"id": 63,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {}
+								}
+							],
+							"parameters": [
+								{
+									"id": 64,
+									"name": "handler",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "WatchHandler",
+										"id": 13
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "AsyncFunctionDecorator",
+								"id": 46,
+								"typeArguments": [
+									{
+										"type": "typeParameter",
+										"name": "T"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "decorators.ts",
+							"line": 30,
+							"character": 28
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						46
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						54,
+						58,
+						65,
+						61
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "decorators.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 32,
+			"name": "\"index\"",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "D:/Coding/typescript/promise-decorators/master/src/index.ts",
+			"children": [
+				{
+					"id": 33,
+					"name": "AsyncFunction",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"typeParameter": [
+						{
+							"id": 34,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {}
+						}
+					],
+					"signatures": [
+						{
+							"id": 35,
+							"name": "__call",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 36,
+									"name": "args",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {
+										"isRest": true
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "any"
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Promise",
+								"typeArguments": [
+									{
+										"type": "typeParameter",
+										"name": "T"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 1,
+							"character": 30
+						}
+					]
+				},
+				{
+					"id": 41,
+					"name": "Rejecter",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"typeParameter": [
+						{
+							"id": 42,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {}
+						}
+					],
+					"signatures": [
+						{
+							"id": 43,
+							"name": "__call",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 44,
+									"name": "reason",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "any"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Promise",
+								"typeArguments": [
+									{
+										"type": "typeParameter",
+										"name": "T"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 9,
+							"character": 25
+						}
+					]
+				},
+				{
+					"id": 37,
+					"name": "Resolver",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"typeParameter": [
+						{
+							"id": 38,
+							"name": "T",
+							"kind": 131072,
+							"kindString": "Type parameter",
+							"flags": {}
+						}
+					],
+					"signatures": [
+						{
+							"id": 39,
+							"name": "__call",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"parameters": [
+								{
+									"id": 40,
+									"name": "value",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "typeParameter",
+												"name": "T"
+											},
+											{
+												"type": "reference",
+												"name": "PromiseLike",
+												"typeArguments": [
+													{
+														"type": "typeParameter",
+														"name": "T"
+													}
+												]
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Promise",
+								"typeArguments": [
+									{
+										"type": "typeParameter",
+										"name": "T"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 5,
+							"character": 25
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						33,
+						41,
+						37
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 6,
+			"name": "\"modules/asyncTransform\"",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"originalName": "D:/Coding/typescript/promise-decorators/master/src/modules/asyncTransform.ts",
+			"children": [
+				{
+					"id": 7,
+					"name": "asyncTransform",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 8,
+							"name": "asyncTransform",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Transforms a given promise-function with a transform function"
+							},
+							"typeParameter": [
+								{
+									"id": 9,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {}
+								}
+							],
+							"parameters": [
+								{
+									"id": 10,
+									"name": "fn",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "a function to be transformed"
+									},
+									"type": {
+										"type": "reference",
+										"name": "AsyncFunction",
+										"id": 33,
+										"typeArguments": [
+											{
+												"type": "typeParameter",
+												"name": "T"
+											}
+										]
+									}
+								},
+								{
+									"id": 11,
+									"name": "transform",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "function which take a function, do some stuff and returns a new one\ne.g. _.throttle (from lodash)\n"
+									},
+									"type": {
+										"type": "reference",
+										"name": "Function"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "AsyncFunction",
+								"id": 33,
+								"typeArguments": [
+									{
+										"type": "typeParameter",
+										"name": "T"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "modules/asyncTransform.ts",
+							"line": 10,
+							"character": 30
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						7
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "modules/asyncTransform.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 1,
+			"name": "\"modules/takeLast\"",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"originalName": "D:/Coding/typescript/promise-decorators/master/src/modules/takeLast.ts",
+			"children": [
+				{
+					"id": 2,
+					"name": "takeLast",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 3,
+							"name": "takeLast",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Takes a promise-functions and return new one\nwhich returns a promise which will be resolved (or rejected)\nif it (the promise) the result of last function execution"
+							},
+							"typeParameter": [
+								{
+									"id": 4,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {}
+								}
+							],
+							"parameters": [
+								{
+									"id": 5,
+									"name": "fn",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "a function to be wrapped\n"
+									},
+									"type": {
+										"type": "reference",
+										"name": "AsyncFunction",
+										"id": 33,
+										"typeArguments": [
+											{
+												"type": "typeParameter",
+												"name": "T"
+											}
+										]
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "AsyncFunction",
+								"id": 33,
+								"typeArguments": [
+									{
+										"type": "typeParameter",
+										"name": "T"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "modules/takeLast.ts",
+							"line": 10,
+							"character": 24
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						2
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "modules/takeLast.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 22,
+			"name": "\"modules/throttle\"",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"originalName": "D:/Coding/typescript/promise-decorators/master/src/modules/throttle.ts",
+			"children": [
+				{
+					"id": 27,
+					"name": "throttle",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 28,
+							"name": "throttle",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Very similar to a classical throttle.\nThrottled function returns promises, which will be resolved (or rejected)\nnot more frequently than once in *pause* time period"
+							},
+							"typeParameter": [
+								{
+									"id": 29,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {}
+								}
+							],
+							"parameters": [
+								{
+									"id": 30,
+									"name": "fn",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "source promise-function"
+									},
+									"type": {
+										"type": "reference",
+										"name": "AsyncFunction",
+										"id": 33,
+										"typeArguments": [
+											{
+												"type": "typeParameter",
+												"name": "T"
+											}
+										]
+									}
+								},
+								{
+									"id": 31,
+									"name": "pause",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "a minimum pause between promise resolutions (or rejections)\n"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "AsyncFunction",
+								"id": 33,
+								"typeArguments": [
+									{
+										"type": "typeParameter",
+										"name": "T"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "modules/throttle.ts",
+							"line": 54,
+							"character": 24
+						}
+					]
+				},
+				{
+					"id": 23,
+					"name": "throttleFn",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 24,
+							"name": "throttleFn",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "internal realization of throttle"
+							},
+							"parameters": [
+								{
+									"id": 25,
+									"name": "fn",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {},
+									"type": {
+										"type": "reference",
+										"name": "Function"
+									}
+								},
+								{
+									"id": 26,
+									"name": "pause",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "\n"
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "Function"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "modules/throttle.ts",
+							"line": 10,
+							"character": 26
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						27,
+						23
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "modules/throttle.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 12,
+			"name": "\"modules/watchPromise\"",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true,
+				"isExternal": true
+			},
+			"originalName": "D:/Coding/typescript/promise-decorators/master/src/modules/watchPromise.ts",
+			"children": [
+				{
+					"id": 13,
+					"name": "WatchHandler",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"comment": {
+						"shortText": "Takes a promise state and do any side effects"
+					},
+					"signatures": [
+						{
+							"id": 14,
+							"name": "__call",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Takes a promise state and do any side effects"
+							},
+							"parameters": [
+								{
+									"id": 15,
+									"name": "state",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"name": "PromiseState",
+										"id": 16
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "modules/watchPromise.ts",
+							"line": 8,
+							"character": 29
+						}
+					]
+				},
+				{
+					"id": 16,
+					"name": "PromiseState",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"sources": [
+						{
+							"fileName": "modules/watchPromise.ts",
+							"line": 3,
+							"character": 24
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "stringLiteral",
+								"value": "pending"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "resolved"
+							},
+							{
+								"type": "stringLiteral",
+								"value": "rejected"
+							}
+						]
+					}
+				},
+				{
+					"id": 17,
+					"name": "watchPromise",
+					"kind": 64,
+					"kindString": "Function",
+					"flags": {
+						"isExported": true,
+						"isExternal": true
+					},
+					"signatures": [
+						{
+							"id": 18,
+							"name": "watchPromise",
+							"kind": 4096,
+							"kindString": "Call signature",
+							"flags": {},
+							"comment": {
+								"shortText": "Wraps a promise-function into a new one,\nwhich behave the same but also calls a handler each time\na promise returned ('pending'), resolved or rejected"
+							},
+							"typeParameter": [
+								{
+									"id": 19,
+									"name": "T",
+									"kind": 131072,
+									"kindString": "Type parameter",
+									"flags": {}
+								}
+							],
+							"parameters": [
+								{
+									"id": 20,
+									"name": "fn",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "source promise-function"
+									},
+									"type": {
+										"type": "reference",
+										"name": "AsyncFunction",
+										"id": 33,
+										"typeArguments": [
+											{
+												"type": "typeParameter",
+												"name": "T"
+											}
+										]
+									}
+								},
+								{
+									"id": 21,
+									"name": "handler",
+									"kind": 32768,
+									"kindString": "Parameter",
+									"flags": {},
+									"comment": {
+										"text": "a function to be called on promise state change\n"
+									},
+									"type": {
+										"type": "reference",
+										"name": "WatchHandler",
+										"id": 13
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"name": "AsyncFunction",
+								"id": 33,
+								"typeArguments": [
+									{
+										"type": "typeParameter",
+										"name": "T"
+									}
+								]
+							}
+						}
+					],
+					"sources": [
+						{
+							"fileName": "modules/watchPromise.ts",
+							"line": 19,
+							"character": 28
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						13
+					]
+				},
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						16
+					]
+				},
+				{
+					"title": "Functions",
+					"kind": 64,
+					"children": [
+						17
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "modules/watchPromise.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "External modules",
+			"kind": 1,
+			"children": [
+				45,
+				32,
+				6,
+				1,
+				22,
+				12
+			]
+		}
+	]
+}
