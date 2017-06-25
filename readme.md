@@ -5,7 +5,7 @@ About
 ---
 This is a library which provides tools for asynchronus functions transformation.
 
-Each of them is a function-transformer which takes `AsyncFunction` (any function returning a `Promise`) and return a new one which tweak the behaviour of the original.
+Each of them is a function-transformer which takes `AsyncFunction` (any function returning a `Promise`) and returns a new one that tweaks the behaviour of the original.
 
 E.g.:
 ```js
@@ -14,7 +14,7 @@ E.g.:
     const throttledFetch = throttle(fetch);
 ```
 
-So it's pretty much like lodash method for Functions, but aimed for the asyncronous ones.
+So it's pretty much like lodash method for functions but made for the asyncronous ones.
 
 Demo
 ---
@@ -34,7 +34,7 @@ Some additional documentation could be found in ./docs folder (generated) and in
 Explanation
 ---
 Promises help a developer to work with asyncrous code in JavaScript.
-They represent a value which will be available later. And we can do something at that moment via `then`, `catch`. Let's take a look at wikipedia search exmple:
+They represent value which will be available later. And we can do something at that moment via `then`, `catch`. Let's take a look at wikipedia search exmple:
 
 ```js
 function outputData(data){
@@ -64,9 +64,9 @@ searchBox.addEventListener('input', () => {
     updateTitle(text);    
 });
 ```
-It works in most cases but may couse problems due to the fact that this code will create a request each time user press a key. It could be a problem and in the most of the time you do not need to do it so frequently.
+It works in most cases but may couse problems due to the fact that this code will create a request each time a user presses a key. It could be a problem and most of the time you do not need to do it so frequently.
 
-Usually used tools to reduce amount of requests are `throttle` and `debounce`. They are function to limit count of function calls through time. So they take a function and return a new one which is the modified the former.
+Common used tools to reduce amount of requests are `throttle` and `debounce`. They are function to limit count of function calls through time. So they take a function and return a new one that modyfies original.
 
 It seemed like the only thing to do is to `throttle` a function, but which one?
 
@@ -80,7 +80,7 @@ searchBox.addEventListener('input', _.throttle(() => {
 
 It'll work but there are some problems:
 - event handler is not the one we have problem with, it's a bit strange to `throttle` whole thing because of small piece of it
-- there could be some code which should be run on each key press really, e.g. it might be a good idea to call `updateTitle` on each key press and limit only network operations
+- there could be some code which should be actually run on each key press, e.g. it might be a good idea to call `updateTitle` on each key press and limit only network operations
 
 There is a 2'nd option - `throttle` only fetch:
 ```js
@@ -97,9 +97,9 @@ searchBox.addEventListener('input', () => {
 });
 ```
 
-That's a bit more reasanoble as for me but still there is a problem (and tricky one)! In that case frequency of requests will be reduced, and `updateTitle` will be called right amount of time.
+As for me, that's a bit more reasanoble but still there is a problem (and tricky one)! In that case frequency of requests will be reduced, and `updateTitle` will be called proper number of times.
 
-But `throttledFetch` will return a promise in first time... and a copy of this 1'st promise on each key-press before the next *real* promise. Which means that `outputData` will be called several times with the same data!
+But `throttledFetch` will return a promise in first time... and a copy of this 1'st promise on each key-press before the next *real* promise. It means that `outputData` will be called several times with the same data!
 
 Promise-decorators solution
 ---
@@ -122,4 +122,4 @@ searchBox.addEventListener('input', () => {
     updateTitle(text);    
 });
 ```
-But in that case will be resolved not more than 1 `Promise` per second (all between will not be resolved nor rejected). So: no extra request, no extra rerendering.
+But in that case it will be resolved not more than 1 `Promise` per second (all between will neither be resolved nor rejected). So: no extra request, no extra rerendering.
