@@ -652,7 +652,7 @@
 									"kindString": "Parameter",
 									"flags": {},
 									"comment": {
-										"text": "a function to be transformed"
+										"text": "source promise-function"
 									},
 									"type": {
 										"type": "reference",
@@ -673,7 +673,7 @@
 									"kindString": "Parameter",
 									"flags": {},
 									"comment": {
-										"text": "function which take a function, do some stuff and returns a new one\ne.g. _.throttle (from lodash)\n"
+										"text": "function which take a function, do some stuff with it and returns a new one\ne.g. _.throttle (from lodash)\n"
 									},
 									"type": {
 										"type": "reference",
@@ -748,7 +748,7 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Takes a promise-functions and return new one\nwhich returns a promise which will be resolved (or rejected)\nif it (the promise) the result of last function execution"
+								"shortText": "The transformed function returns a `Promise` which will be resolved (or rejected)\nonly if it's the last. So if after calling no any previous returned promises will be settled."
 							},
 							"typeParameter": [
 								{
@@ -767,7 +767,7 @@
 									"kindString": "Parameter",
 									"flags": {},
 									"comment": {
-										"text": "a function to be wrapped\n"
+										"text": "source promise-function\n"
 									},
 									"type": {
 										"type": "reference",
@@ -798,7 +798,7 @@
 					"sources": [
 						{
 							"fileName": "modules/takeLast.ts",
-							"line": 10,
+							"line": 9,
 							"character": 24
 						}
 					]
@@ -1110,7 +1110,7 @@
 							"kindString": "Call signature",
 							"flags": {},
 							"comment": {
-								"shortText": "Wraps a promise-function into a new one,\nwhich behave the same but also calls a handler each time\na promise returned ('pending'), resolved or rejected"
+								"shortText": "Keeps the beahvior of the original function the same,\nbut also calls the `handler` on `Promise` state change."
 							},
 							"typeParameter": [
 								{
@@ -1175,7 +1175,7 @@
 					"sources": [
 						{
 							"fileName": "modules/watchPromise.ts",
-							"line": 19,
+							"line": 18,
 							"character": 28
 						}
 					]

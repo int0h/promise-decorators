@@ -21,9 +21,8 @@ Signature
 
 Description
 ---
-Wraps a promise-function into a new one,
-which behave the same but also calls a handler each time
-a promise returned ('pending'), resolved or rejected
+Keeps the beahvior of the original function the same,
+but also calls the `handler` on `Promise` state change.
 
 Parameters
 ---
