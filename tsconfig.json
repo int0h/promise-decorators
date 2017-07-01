@@ -15,6 +15,7 @@
         "inlineSources": true
     },
     "include": [
-        "./src/**.ts"
+        "./src/**.ts",
+        "./src/tests/index.ts"
     ]
 }

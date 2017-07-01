@@ -1,0 +1,7 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var ava_1 = require("ava");
+ava_1.default('tests work at all', function (t) {
+    t.is(1, 1);
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9zcmMvdGVzdHMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSwyQkFBdUI7QUFHdkIsYUFBSSxDQUFDLG1CQUFtQixFQUFFLFVBQUEsQ0FBQztJQUN2QixDQUFDLENBQUMsRUFBRSxDQUFDLENBQUMsRUFBRSxDQUFDLENBQUMsQ0FBQztBQUNmLENBQUMsQ0FBQyxDQUFBIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHt0aHJvdHRsZX0gZnJvbSAnLi4vLi4vZGlzdC9pbmRleCc7XG5pbXBvcnQgdGVzdCBmcm9tICdhdmEnO1xuaW1wb3J0IHtmZXRjaH0gZnJvbSAnLi9oZWxwZXJzJztcblxudGVzdCgndGVzdHMgd29yayBhdCBhbGwnLCB0ID0+IHtcbiAgICB0LmlzKDEsIDEpO1xufSkiXX0=
