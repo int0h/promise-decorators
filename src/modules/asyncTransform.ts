@@ -1,5 +1,12 @@
 import {AsyncFunction, Resolver, Rejecter} from '../index';
 
+/**
+ * Transforms a given promise-function with a transform function
+ * 
+ * @param fn - source promise-function
+ * @param transform - function which take a function, do some stuff with it and returns a new one
+ * e.g. _.throttle (from lodash)
+ */
 export function asyncTransform<T>(fn: AsyncFunction<T>, transform: Function): AsyncFunction<T> {
 	const tfn = function(args: any[], resolve: Resolver<T>, reject: Rejecter<T>) {
 		return fn.apply(this, args).then(resolve, reject);
