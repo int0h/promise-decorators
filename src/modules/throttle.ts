@@ -1,5 +1,6 @@
 import {AsyncFunction, Resolver, Rejecter} from '../index';
 import {asyncTransform} from './asyncTransform';
+import {ThrottleSettings} from 'lodash';
 
 /**
  * internal realization of throttle
@@ -51,6 +52,10 @@ export function throttleFn(fn: Function, pause: number): Function {
  * @param fn - source promise-function
  * @param pause - a minimum pause between promise resolutions (or rejections)
  */
-export function throttle<T>(fn: AsyncFunction<T>, pause: number): AsyncFunction<T> {
+export function throttle<T>(
+	fn: AsyncFunction<T>, 
+	pause?: number, 
+	options?: ThrottleSettings
+): AsyncFunction<T> {
 	return asyncTransform(fn, (fn: AsyncFunction<T>) => throttleFn(fn, pause));
 }

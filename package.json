@@ -3,12 +3,16 @@
   "version": "0.0.1",
   "description": "demo https://int0h.github.io/promise-decorators/",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
   "devDependencies": {
+    "@types/lodash": "^4.14.68",
+    "ava": "^0.20.0",
     "typedoc-markdown": "git+https://github.com/int0h/typedoc-markdown.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava ./dist/tests/ -v"
   },
   "repository": {
     "type": "git",

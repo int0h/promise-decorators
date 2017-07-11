@@ -10,6 +10,10 @@ export interface Rejecter<T> {
 	(reason: any): Promise<T>;
 }
 
+export interface Transformer<T> {
+	(fn: AsyncFunction<T>, ...args: any[]): AsyncFunction<T>
+}
+
 export {takeLast} from './modules/takeLast';
 export {asyncTransform} from './modules/asyncTransform';
 export {watchPromise, PromiseState, WatchHandler} from './modules/watchPromise';
